@@ -1,0 +1,29 @@
+.table-container {
+    max-height: 409px;
+    overflow-y: auto; 
+}
+.table_task {
+    width: 50%;
+    border-collapse: collapse;
+
+    th, td {
+        border: 1px solid black; 
+        padding: 8px;
+        text-align: center;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    .STT {
+        width: 50px;
+    }
+    .task {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .checkbox {
+        margin-right: 10px;
+        height: 20px;
+    }
+}
