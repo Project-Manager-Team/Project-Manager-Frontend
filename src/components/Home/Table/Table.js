@@ -120,7 +120,6 @@ function Table({ setReloadTableData, setHistory, current, reloadTableData }) {
   }, [editingValue, refreshProjectList, current]);
 
   const handleCreateTempItem = useCallback((e) => {
-    e.preventDefault();
     setProjects((prevProjects) => [
       ...prevProjects,
       {

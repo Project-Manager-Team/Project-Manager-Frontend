@@ -64,10 +64,9 @@ export const createProject = async (accessToken, url, projectData) => {
       Authorization: `Bearer ${accessToken}`,
     },
     body: JSON.stringify({
-      ...projectData, // Đảm bảo gửi parent_id
+      ...projectData, 
     }),
   });
-
   if (!response.ok) {
     throw new Error("Failed to create project");
   }

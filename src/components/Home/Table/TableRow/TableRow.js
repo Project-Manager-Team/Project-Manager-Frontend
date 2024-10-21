@@ -7,6 +7,9 @@ import Manager from "../ManagerButton";
 
 
 function formatDatetimeForInput(datetimeString) {
+  if (datetimeString === null) {
+    return null;
+  }
   const date = new Date(datetimeString);
   const year = date.getFullYear();
   const month = (date.getMonth() + 1).toString().padStart(2, "0");

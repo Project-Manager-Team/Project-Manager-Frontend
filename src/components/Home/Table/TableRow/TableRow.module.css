@@ -26,6 +26,12 @@
 .projectCell:nth-child(1) {
   width: 50px; /* Column 1 width */
 }
+.projectCell:nth-child(3) {
+  width: 150px; /* Column 1 width */
+}
+.projectCell:nth-child(6) {
+  width: 200px; /* Column 1 width */
+}
 
 .projectCell input,
 .projectCell textarea,
