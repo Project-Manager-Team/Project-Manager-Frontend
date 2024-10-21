@@ -96,8 +96,7 @@ function Avatar() {
                 Đổi mật khẩu
               </div>
               <button onClick={handleSignOut} className="avatar__changepass">
-                {" "}
-                Đăng xuất{" "}
+                Đăng xuất
               </button>
             </div>
           )}
