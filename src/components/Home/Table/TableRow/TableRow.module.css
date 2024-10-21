@@ -1,0 +1,72 @@
+/* TableRow.module.css */
+.projectRow {
+  display: table-row;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative; /* Ensure the action buttons are positioned relative to the row */
+  margin-bottom: 10px; /* Add margin between rows */
+}
+
+.projectRow:hover {
+  background-color: rgba(240, 240, 240, 0.7);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.projectCell {
+  display: table-cell;
+  padding: 10px;
+  font-size: 20px; /* Increase font size to 16px */
+  border: none; /* Remove border */
+}
+
+.projectCell:nth-child(1) {
+  width: 50px; /* Column 1 width */
+}
+
+.projectCell input,
+.projectCell textarea,
+.projectCell select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: none; /* Remove border */
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: transparent; /* Ensure background is transparent */
+}
+
+.projectCell textarea {
+  resize: none; /* Prevent resizing of textarea */
+}
+
+.progressContainer {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.progressBar {
+  background-color: #4caf50;
+  text-align: center;
+  line-height: 20px;
+  color: white;
+  border-radius: 50px;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0; /* Hide action buttons by default */
+  transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.projectRow:hover .actionButtons {
+  opacity: 1; /* Show action buttons on hover */
+}
