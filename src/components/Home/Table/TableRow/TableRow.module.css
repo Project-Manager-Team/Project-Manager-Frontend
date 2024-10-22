@@ -52,16 +52,18 @@
 .progressContainer {
   width: 100%;
   background-color: #e0e0e0;
-  border-radius: 50px;
+  border-radius: 25px;
   overflow: hidden;
 }
 
 .progressBar {
-  background-color: #4caf50;
-  text-align: center;
+  background-color: #76c7c0;
+  height: 100%;
   line-height: 20px;
+  text-align: center;
   color: white;
-  border-radius: 50px;
+  border-radius: 25px 0 0 25px;
+  transition: width 0.25s;
 }
 
 .actionButtons {
@@ -72,7 +74,51 @@
   opacity: 0; /* Hide action buttons by default */
   transition: opacity 0.3s ease; /* Smooth transition */
 }
+/* Container for custom checkbox */
+.customCheckbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+}
 
+/* Hide the default checkbox */
+.hiddenCheckbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+/* Custom checkmark */
+.customCheckbox::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Show the checkmark when the checkbox is checked */
+.hiddenCheckbox:checked + .customCheckbox::after {
+  display: block;
+}
+
+/* Change background color when the checkbox is checked */
+.hiddenCheckbox:checked + .customCheckbox {
+  background-color: #76c7c0;
+}
 .projectRow:hover .actionButtons {
   opacity: 1; /* Show action buttons on hover */
 }
